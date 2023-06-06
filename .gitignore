@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.vscode
+tmp
+*.db
+*.sum
+
+./server/.idea
+
+./web/.idea
+./web/node_modules
+./web/.vscode
