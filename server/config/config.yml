@@ -1,0 +1,12 @@
+mysql:
+    addr: 127.0.0.1:3306
+    dbname: gvts
+    username: root
+other:
+    redisuserprefix: 'user:'
+    serverurl: 127.0.0.1:9666
+redis:
+    addr: 127.0.0.1:6379
+token:
+    refresh_secret: go-vue-ts-refresh-secret
+    secret: go-vue-ts-secret
