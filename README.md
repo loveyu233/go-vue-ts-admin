@@ -30,7 +30,7 @@
 
 根据路由的title和leave层级生成对应菜单
 
-![loveyu 2](../loveyu%202.png)
+![loveyu-6664291](https://www.loveyu.asia//img/a.png)
 
 ## 权限校验
 
@@ -42,9 +42,9 @@
 
 支持对路由的增删改查操作,并持久化到mysql中
 
-![loveyu 4](../loveyu%204.png)
+![loveyu-6664291](https://www.loveyu.asia//img/b.png)
 
-![loveyu 5](../loveyu%205.png)
+![loveyu-6664291](https://www.loveyu.asia//img/c.png)
 
 
 
