@@ -29,14 +29,14 @@
 import {rootStore} from "@/store";
 import {GetTime} from "@/utils/time.ts";
 import {onMounted, ref} from "vue";
-import {GetCarouselAll} from "@/api/carousel";
+import {GetCarouselShow} from "@/api/carousel";
 import {CarouselType} from "@/type/userApi.ts";
 
 let userStore = rootStore();
 let images = ref<CarouselType[]>();
 
 onMounted(() => {
-    GetCarouselAll().then(res => {
+    GetCarouselShow().then(res => {
         images.value = res.data;
         console.log(images.value);
     });

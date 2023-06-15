@@ -22,6 +22,9 @@ const (
 	UserInfoUpdateErr         ResponseCode = 505
 	MenuInfoUpdateErr                      = 506
 	CarouselsGetErr                        = 507
+	CarouselsAddErr                        = 508
+	CarouselsDeleteErr                     = 509
+	CarouselsUpdateErr                     = 510
 )
 
 // ResponseMessage 表示响应的状态说明
@@ -43,4 +46,7 @@ var ResponseMessage = map[ResponseCode]string{
 	UserInfoUpdateErr:         "用户信息更新失败",
 	MenuInfoUpdateErr:         "路由修改失败",
 	CarouselsGetErr:           "轮播图获取失败",
+	CarouselsAddErr:           "轮播图图片添加失败",
+	CarouselsDeleteErr:        "删除轮播图失败",
+	CarouselsUpdateErr:        "修改轮播图图片失败",
 }

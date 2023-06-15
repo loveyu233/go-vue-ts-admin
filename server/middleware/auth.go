@@ -12,7 +12,6 @@ import (
 func UserAuth() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("token")
-		log.Println(token)
 		err := jwt.VerifyToken(token)
 		if err != nil {
 			log.Println(err)

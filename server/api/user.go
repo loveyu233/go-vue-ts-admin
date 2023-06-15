@@ -47,7 +47,7 @@ func (u UserApi) UserExit(c *gin.Context) {
 	c.JSON(200, response.NewSuccessResponse(gin.H{"message": "退出成功"}))
 }
 
-const dst = "./static/icon/"
+const dst = "./static/image/"
 
 func (u UserApi) AddUserIcon(c *gin.Context) {
 	file, err := c.FormFile("file")
@@ -64,7 +64,7 @@ func (u UserApi) AddUserIcon(c *gin.Context) {
 
 	//userService.UserIconUpdate(file)
 	c.JSON(200, response.NewSuccessResponse(gin.H{
-		"url": fmt.Sprintf("%s%s%s", serverUrl, "/static/icon/", file.Filename),
+		"url": fmt.Sprintf("%s%s%s", serverUrl, "/static/image/", file.Filename),
 	}))
 }
 

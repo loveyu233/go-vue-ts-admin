@@ -19,8 +19,7 @@ func InitCore() {
 
 	app := gin.Default()
 	app.Use(middleware.Cors())
-	app.StaticFS("/static/icon", http.Dir("./static/icon"))
-	app.StaticFS("/carousel", http.Dir("./static/carousel"))
+	app.StaticFS("/static/image", http.Dir("./static/image"))
 	group := app.Group("/api")
 	router.InitRoutes(group)
 	app.Run(fmt.Sprintf(viper.GetString("other.serverUrl")))

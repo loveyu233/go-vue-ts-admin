@@ -1,7 +1,6 @@
 import axios from "axios";
 // @ts-ignore
 import {ElMessage} from "element-plus";
-import {rootStore} from "@/store";
 import {GET_TOKEN} from "@/utils/tokn.ts";
 
 const request = axios.create({
@@ -61,6 +60,7 @@ request.interceptors.response.use((res) => {
         if (JSON.stringify(error).includes("timeout")) {
             ElMessage.error("服务器响应超时，请刷新当前页");
         }
+        console.log(error);
         error.message = "连接服务器失败";
     }
     ElMessage.error(error.message);
@@ -68,6 +68,9 @@ request.interceptors.response.use((res) => {
     //如果不需要错误处理，以上的处理过程都可省略
     return Promise.resolve(error.response);
 });
+
+// @ts-ignore
+
 
 request.interceptors.request.use((config) => {
     let token = GET_TOKEN();

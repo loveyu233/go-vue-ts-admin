@@ -134,10 +134,17 @@ export interface ResMenuUpdateType {
 export interface CarouselType {
     id: number,
     url: string
+    isShow: boolean
 }
 
 export interface ResCarouselType {
     code: number,
     message: string,
     data: CarouselType[]
+}
+
+export interface AddCarouselType {
+    code: number,
+    data: number,
+    message: number
 }

@@ -78,7 +78,6 @@ const login = async () => {
     await form.value.validate();
 
     loading.value = true;
-    debugger
     try {
         await store.login(loginForm);
         ElNotification({

@@ -17,6 +17,6 @@ func InitUserRoute(group *gin.RouterGroup) {
 	auth.GET("/info", userApi.GetUserInfo)
 	auth.GET("/verify", userApi.VerifyToken)
 	auth.GET("/exit", userApi.UserExit)
-	auth.POST("/icon", userApi.AddUserIcon)
+	auth.POST("/image", userApi.AddUserIcon)
 	auth.POST("/update", userApi.UpdateUserInfo)
 }

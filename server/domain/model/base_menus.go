@@ -11,6 +11,6 @@ type SysBaseMenus struct {
 	Component string          `json:"component"`  // 对应前端的vue文件名
 	Sort      int             `json:"sort"`       // 同一层级下的显示顺序
 	Title     string          `json:"title"`      // 路由标题
-	Icon      string          `json:"icon"`       // 路由图标
+	Icon      string          `json:"image"`      // 路由图标
 	Children  []*SysBaseMenus `json:"children"`   // 该路由下的子路由
 }

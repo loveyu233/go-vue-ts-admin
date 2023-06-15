@@ -13,7 +13,7 @@ enum UserApi {
     USERINFO = "/user/info",
     VERIFYTOKEN = "/user/verify",
     USEREXIT = "/user/exit",
-    UPDATEICON = "/user/icon",
+    UPDATEICON = "/user/image",
     UPDATEUSERINFO = "/user/update"
 }
 
