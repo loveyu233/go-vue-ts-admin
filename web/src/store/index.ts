@@ -39,6 +39,7 @@ export const rootStore = defineStore("root", {
         async getMenusInfo() {
             let res = await GetMenusInfo();
             if (res.code === 200) {
+                console.log(res.data);
                 this.menus = res.data;
                 let toRouteObjects = convertToRouteObjects(this.menus);
                 toRouteObjects.forEach(item => {

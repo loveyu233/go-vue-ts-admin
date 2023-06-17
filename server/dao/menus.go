@@ -12,7 +12,7 @@ const (
 	getMenusInfo = "SELECT * FROM sys_base_menus ORDER BY r_id"
 	Limit        = "select * from sys_base_menus limit ?,?"
 	Count        = "select count(*) from sys_base_menus"
-	Update       = "update sys_base_menus set title=?, image=? where id=?;"
+	Update       = "update sys_base_menus set title=?, icon=? where id=?;"
 )
 
 func GetMenusInfo() ([]*model.SysBaseMenus, error) {

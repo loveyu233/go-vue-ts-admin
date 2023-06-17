@@ -6,6 +6,7 @@ tmp
 *.sum
 
 ./server/.idea
+./server/test
 
 ./web/.idea
 ./web/node_modules
