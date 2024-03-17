@@ -3,7 +3,6 @@ package api
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/spf13/viper"
 	"log"
 	"server/cache"
 	"server/domain/dto"
@@ -60,7 +59,7 @@ func (u UserApi) AddUserIcon(c *gin.Context) {
 		c.JSON(200, response.NewErrorResponse(valid.IconUpdateErr))
 		return
 	}
-	var serverUrl = fmt.Sprintf("%s%s", "http://", viper.GetString("124.221.217.82"))
+	var serverUrl = "http://124.221.217.82"
 
 	//userService.UserIconUpdate(file)
 	c.JSON(200, response.NewSuccessResponse(gin.H{

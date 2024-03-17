@@ -1,4 +1,4 @@
 export default {
-    icon: "http://127.0.0.1:9666/static/image/%E7%8C%AB%E7%BE%BD%E9%9B%AB-89882698-0.gif",
+    icon: "http://124.221.217.82:9001/static/image/猫羽雫-89882698-0.gif",
     title: "22333"
 };

@@ -24,6 +24,7 @@ func InitCore() {
 			"msg": "hello",
 		})
 	})
+	initialization.InitDist(app)
 	app.StaticFS("/static/image", http.Dir("./static/image"))
 	group := app.Group("/api")
 	router.InitRoutes(group)
