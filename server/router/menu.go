@@ -8,8 +8,7 @@ import (
 func InitMenuRouter(group *gin.RouterGroup) {
 	menuApi := api.NewMenuApi()
 	menu := group.Group("/menu")
-	// TODO
-	//group.Use(middleware.UserAuth())
+	// group.Use(middleware.UserAuth())
 	menu.GET("/info", menuApi.GetMenusTree)
 	menu.GET("/list", menuApi.GetMenusList)
 	menu.GET("/limit", menuApi.MenusLimit)

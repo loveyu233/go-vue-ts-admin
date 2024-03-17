@@ -3,7 +3,9 @@
         <el-card>
             <el-form :inline="true">
                 <el-form-item label="一级路由">
-                    <el-select v-model="routerId.oneMenu">
+                    <el-select
+                        v-model="routerId.oneMenu"
+                    >
                         <el-option
                                 v-for="item in userStore.menus"
                                 :key="item.r_id"

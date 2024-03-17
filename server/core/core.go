@@ -19,6 +19,11 @@ func InitCore() {
 
 	app := gin.Default()
 	app.Use(middleware.Cors())
+	app.GET("/hello", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"msg": "hello",
+		})
+	})
 	app.StaticFS("/static/image", http.Dir("./static/image"))
 	group := app.Group("/api")
 	router.InitRoutes(group)

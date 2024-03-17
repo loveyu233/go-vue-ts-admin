@@ -1,10 +1,11 @@
 mysql:
-    addr: 127.0.0.1:3306
+    addr: 124.221.217.82:3306
     dbname: gvts
+    password: abc123..
     username: root
 other:
     redisuserprefix: 'user:'
-    serverurl: 127.0.0.1:9666
+    serverurl: 0.0.0.0:9001
 redis:
     addr: 127.0.0.1:6379
 token:
