@@ -60,7 +60,7 @@ func (u UserApi) AddUserIcon(c *gin.Context) {
 		c.JSON(200, response.NewErrorResponse(valid.IconUpdateErr))
 		return
 	}
-	var serverUrl = fmt.Sprintf("%s%s", "http://", viper.GetString("other.serverUrl"))
+	var serverUrl = fmt.Sprintf("%s%s", "http://", viper.GetString("124.221.217.82"))
 
 	//userService.UserIconUpdate(file)
 	c.JSON(200, response.NewSuccessResponse(gin.H{

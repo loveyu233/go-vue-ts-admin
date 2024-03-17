@@ -18,6 +18,6 @@ COPY --from=builder /build/server /app/server
 COPY --from=builder /build/config/config.yml /app/config/config.yml
 COPY --from=builder /build/static/image/* /app/static/image/
 
-EXPOSE 9666
+EXPOSE 9001
 
 CMD /app/server

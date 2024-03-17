@@ -7,7 +7,7 @@ other:
     redisuserprefix: 'user:'
     serverurl: 0.0.0.0:9001
 redis:
-    addr: 127.0.0.1:6379
+    addr: 124.221.217.82:6379
 token:
     refresh_secret: go-vue-ts-refresh-secret
     secret: go-vue-ts-secret

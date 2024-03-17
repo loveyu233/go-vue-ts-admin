@@ -9,7 +9,7 @@ import {
 import axios from "axios";
 
 enum UserApi {
-    LOGIN = "http://127.0.0.1:9666/api/user/login",
+    LOGIN = "http://124.221.217.82:9001/api/user/login",
     USERINFO = "/user/info",
     VERIFYTOKEN = "/user/verify",
     USEREXIT = "/user/exit",
