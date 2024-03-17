@@ -6,7 +6,7 @@ COPY . .
 
 ENV GOPROXY=https://goproxy.cn,direct
 
-RUN go mod download && go build -ldflags "-s -w" -o server main.go
+RUN go mod tidy && go build -ldflags "-s -w" -o server main.go
 
 FROM alpine:3.18
 
