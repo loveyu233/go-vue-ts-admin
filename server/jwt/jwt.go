@@ -1,9 +1,10 @@
 package jwt
 
 import (
+	"errors"
 	"github.com/golang-jwt/jwt/v4"
+	"github.com/spf13/cast"
 	"github.com/spf13/viper"
-	"server/global"
 	"time"
 )
 
@@ -13,24 +14,27 @@ type Claims struct {
 }
 
 func CreateToken(id int) (string, error) {
-	accessJwtKey := []byte(viper.GetString("token.secret"))
-	claims := Claims{
-		UserId: id,
-		RegisteredClaims: jwt.RegisteredClaims{
-			IssuedAt:  jwt.NewNumericDate(time.Now()),
-			ExpiresAt: global.TokenExpirationTime,
-			Issuer:    "233",
-		},
+	now := time.Now()
+	expire := now.AddDate(0, 0, 1)
+	accessJwtKey := []byte("go-vue-ts-secret")
+	claims := jwt.MapClaims{
+		"user_id":     id,
+		"login_time":  now.UnixMilli(),
+		"expire_time": expire.UnixMilli(),
 	}
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, &claims)
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	return token.SignedString(accessJwtKey)
 }
 
 func GetPayload(token string) (int, error) {
-	parser := jwt.NewParser()
-	var claims Claims
-	_, _, err := parser.ParseUnverified(token, &claims)
-	return claims.UserId, err
+	parse, _ := jwt.Parse(token, func(token *jwt.Token) (interface{}, error) {
+		return nil, nil
+	})
+	claims, ok := parse.Claims.(jwt.MapClaims)
+	if !ok {
+		return -1, errors.New("token parse err")
+	}
+	return cast.ToInt(claims["user_id"]), nil
 }
 
 func VerifyToken(token string) error {
