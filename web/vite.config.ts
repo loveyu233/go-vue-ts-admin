@@ -4,6 +4,7 @@ import * as path from "path";
 import {createSvgIconsPlugin} from "vite-plugin-svg-icons";
 
 export default defineConfig({
+    base:"/",
     plugins: [
         vue(),
         createSvgIconsPlugin({

@@ -27,13 +27,13 @@ export const rootStore = defineStore("root", {
     actions: {
         async login(data: UserLoginFormType) {
             let res = await Login(data);
-            console.log(res);
-            if (res.data.code === 200) {
-                this.token = <string>res.data.data?.token;
-                SET_TOKEN(<string>res.data.data?.token);
+            console.log(res.code);
+            if (res.code === 200) {
+                this.token = <string>res.data?.token;
+                SET_TOKEN(<string>res.data?.token);
                 return "登录成功";
             } else {
-                return Promise.reject(new Error(res.data?.message));
+                return Promise.reject(new Error(res?.message));
             }
         },
         async getMenusInfo() {

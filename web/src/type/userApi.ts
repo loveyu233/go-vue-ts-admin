@@ -6,12 +6,10 @@ export interface UserLoginFormType {
 
 // 登录返回类型
 export interface UserLoginResponseType {
-    data: {
-        code?: number;
-        message?: string;
-        data?: {
-            token?: string;
-        };
+    code?: number;
+    message?: string;
+    data?: {
+        token?: string;
     };
 }
 

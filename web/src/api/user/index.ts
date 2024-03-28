@@ -6,10 +6,9 @@ import {
     UserLoginResponseType,
     VerifyTokenType
 } from "@/type/userApi.ts";
-import axios from "axios";
 
 enum UserApi {
-    LOGIN = "http://124.221.217.82:9001/api/user/login",
+    LOGIN = "/user/login",
     USERINFO = "/user/info",
     VERIFYTOKEN = "/user/verify",
     USEREXIT = "/user/exit",
@@ -17,7 +16,7 @@ enum UserApi {
     UPDATEUSERINFO = "/user/update"
 }
 
-export const Login = (userForm: UserLoginFormType) => axios.post<any, UserLoginResponseType>(UserApi.LOGIN, userForm);
+export const Login = (userForm: UserLoginFormType) => request.post<any, UserLoginResponseType>(UserApi.LOGIN, userForm);
 
 export const getUserInfo = () => request.get<any, UserInfoResType>(UserApi.USERINFO);
 
